@@ -1,35 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     width: 100%;
+    background-color: #0b97c4;
 }
 
-h2 {
-    font-family: sans-serif;
+.mainBody {
+    width: 70%;
+    margin-left: 15%;
+    background-color: #eeeeee;
 }
 
-h3 {
-    font-family: sans-serif;
-    font-style: italic;
-    padding-top: 0;
-    margin-left: 5%;
+.title {
+    font-family: cursive;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
-.quoteLog {
+.enterQuote {
+    width: 100%;
+    margin-top: 1%;
+    margin-left: 12%;
+    display: inline-block;
+
+}
+
+input {
+    border: none;
+    height: 40px;
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 90%;
+    box-shadow: none;
+    transition: border linear .2s,box-shadow linear .2s;
+    transition-property: border, box-shadow;
+    transition-duration: 0.2s, 0.2s;
+    transition-timing-function: linear, linear;
+
+}
+
+input:focus {
+    outline: none !important;
+    border:1px solid #4DB6AC;
+    box-shadow: none;
+    background-color: rgba(77, 182, 172, 0.3);
+}
+
+.quoteEntry {
     width: 50%;
-    border: 1px solid black;
+    margin-left: 13%;
+    margin-bottom: 15px;
+
 }
 
-.enterText {
-    padding-bottom: 1%;
-    padding-top: 1%;
-    padding-left: 1%;
-    margin-left: 1%;
+.authEntry {
+    width: 18%;
+    margin-left: 29%;
 }
 
 .buttons {
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 27%;
     padding-bottom: 3%;
+    display: inline;
 }
 
 .button {
     margin-left: 1%;
+    background-color: #4DB6AC;
+    color: #FFFFFF;
+    border: none;
+    outline:none;
+    width: 250px;
+    display: inline;
+    border-radius: 0;
+    -webkit-transition: .25s;
+    cursor: pointer;
+    height: 40px;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-appearance: push-button;
+    -webkit-user-select: none;
+    white-space: pre;
+
+
+
 }
+
+.button:hover {
+    background-color: #0b97c4;
+}
+
+hr {
+    display: block;
+    height: 5px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    padding: 0;
+}
+
+
+.quoteLog {
+    width: 70%;
+    margin-left: 15%;
+    border: none;
+}
+
+.quoteContent {
+    width: 100%;
+    background: #eeeeee;
+    height: 15%;
+    margin: 0 auto;
+    padding: 1%;
+
+}
+
+h2 {
+    margin-left: 27%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    padding-top: 0;
+    margin-left: 37%;
+}
+

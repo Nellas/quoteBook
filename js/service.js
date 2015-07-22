@@ -13,15 +13,15 @@ var app = angular.module('quoteBook').service('MainService', function() {
         return quotes;
     };
 
-    //this.addData = function(obj) {
-    //    if (obj.text && obj.author) {
-    //        quotes.push(obj);
-    //    }
-    //};
+    this.addData = function(quote, auth) {
+        if (quote && auth) {
+            quotes.push({text: quote.toString(), author: auth.toString()});
+        }
+    };
 
     this.removeData = function(string) {
         for (var i = quotes.length - 1; i >= 0; i--) {
-            if (quotes[i].text === string) {
+            if (quotes[i].text.toLowerCase() === string.toLowerCase()) {
                 quotes.splice(i, 1);
             }
         }

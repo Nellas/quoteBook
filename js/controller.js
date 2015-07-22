@@ -1,12 +1,18 @@
 var app = angular.module('quoteBook').controller('mainCtrl', function($scope, MainService){
-    console.log("ran");
-    $scope.test = 'TEST';
+
+    $scope.inputQuote = '';
+
+    $scope.inputAuth = '';
 
     $scope.quotes = MainService.getData();
 
-    //$scope.addQuote = MainService.addData();
+    $scope.addQuote = function() {
+        $scope.quotes = MainService.addData($scope.inputQuote, $scope.inputAuth);
+        $scope.quotes = MainService.getData();
+    };
 
-    $scope.removeQuote = MainService.removeData();
-
-
+    $scope.removeQuote = function() {
+        $scope.quotes = MainService.removeData($scope.inputQuote);
+        $scope.quotes = MainService.getData();
+    };
 });
