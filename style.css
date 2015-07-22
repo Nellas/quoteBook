@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+h2 {
+    font-family: sans-serif;
+}
+
+h3 {
+    font-family: sans-serif;
+    font-style: italic;
+    padding-top: 0;
+    margin-left: 5%;
+}
+
+.quoteLog {
+    width: 50%;
+    border: 1px solid black;
+}
+
+.enterText {
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 1%;
+    margin-left: 1%;
+}
+
+.buttons {
+    padding-bottom: 3%;
+}
+
+.button {
+    margin-left: 1%;
+}
