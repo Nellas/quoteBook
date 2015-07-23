@@ -9,8 +9,8 @@ html, body {
 }
 
 .mainBody {
-    width: 70%;
-    margin-left: 15%;
+    width: 950px;
+    margin: auto;
     background-color: #eeeeee;
 }
 
@@ -25,7 +25,7 @@ html, body {
 .enterQuote {
     width: 100%;
     margin-top: 1%;
-    margin-left: 12%;
+    margin-left: 100px;
     display: inline-block;
 
 }
@@ -36,7 +36,7 @@ input {
     margin-bottom: 30px;
     background-color: #FFFFFF;
     text-align: center;
-    font-size: 90%;
+    font-size: 14px;
     box-shadow: none;
     transition: border linear .2s,box-shadow linear .2s;
     transition-property: border, box-shadow;
@@ -53,21 +53,21 @@ input:focus {
 }
 
 .quoteEntry {
-    width: 50%;
-    margin-left: 13%;
+    width: 550px;
+    margin-left: 100px;
     margin-bottom: 15px;
 
 }
 
 .authEntry {
-    width: 18%;
-    margin-left: 29%;
+    width: 275px;
+    margin-left: 238px;
 }
 
 .buttons {
     width: 50%;
     margin-top: 1%;
-    margin-left: 27%;
+    margin-left: 210px;
     padding-bottom: 3%;
     display: inline;
 }
@@ -102,6 +102,15 @@ input:focus {
     background-color: #0b97c4;
 }
 
+.button.hide {
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    font-size: 9px;
+    padding-bottom: 20px;
+
+}
+
 hr {
     display: block;
     height: 5px;
@@ -114,9 +123,8 @@ hr {
 
 
 .quoteLog {
-    width: 70%;
-    margin-left: 15%;
-    border: none;
+    width: 950px;
+    margin: auto;
 }
 
 .quoteContent {
@@ -128,15 +136,20 @@ hr {
 
 }
 
+.closeImage {
+    cursor: pointer;
+    padding-right: 20px;
+}
+
 h2 {
-    margin-left: 27%;
+    text-align: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h3 {
+    text-align: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     padding-top: 0;
-    margin-left: 37%;
 }
 
