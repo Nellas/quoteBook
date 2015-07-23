@@ -12,6 +12,7 @@ html, body {
     width: 950px;
     margin: auto;
     background-color: #eeeeee;
+    padding-bottom: 10px;
 }
 
 .title {
@@ -127,14 +128,6 @@ hr {
     margin: auto;
 }
 
-.quoteContent {
-    width: 100%;
-    background: #eeeeee;
-    height: 15%;
-    margin: 0 auto;
-    padding: 1%;
-
-}
 
 .closeImage {
     cursor: pointer;
@@ -144,12 +137,14 @@ hr {
 h2 {
     text-align: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 35px;
+    margin-bottom: 0;
 }
 
 h3 {
     text-align: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
-    padding-top: 0;
+    margin-top: 7px;
 }
 

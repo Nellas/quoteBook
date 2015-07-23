@@ -8,13 +8,11 @@
 
     <h1 class="title">Quotes Project (Angular Services)</h1>
 
-        <section class="mainBody">
-            <div class="enterQuote">
-                <input class="quoteEntry" placeholder="Enter Quote" ng-model="inputQuote">
-            </div>
-            <div class="enterQuote">
-                <input class="authEntry" placeholder="Enter Author" ng-model="inputAuth">
-            </div>
+    <section class="mainBody">
+        <form class="enterQuote" ng-model="textEnter">
+            <input class="quoteEntry" placeholder="Enter Quote" ng-model="inputQuote">
+            <input class="authEntry" placeholder="Enter Author" ng-model="inputAuth">
+        </form>
 
         <div class="enterQuote">
             <input class="quoteEntry" placeholder="Search" ng=hide="showMe" ng-show="showMe" ng-model="searchTerm">
@@ -27,14 +25,15 @@
         </div>
 
         <hr/>
-    </section>
 
-    <div class="quoteLog" ng-repeat="quote in quotes  | filter:searchTerm track by $index">
-        <div class="quoteContent">
-            <h2><img src="http://icons.iconarchive.com/icons/custom-icon-design/office/16/close-icon.png" class="closeImage" title="remove" ng-click="buttonClicked(quote)">"{{quote.text}}"</h2>
-            <h3>-{{quote.author}}</h3>
+
+        <div class="quoteLog" ng-repeat="quote in quotes  | filter:searchTerm track by $index">
+            <div class="quoteContent">
+                <h2><img src="http://icons.iconarchive.com/icons/custom-icon-design/office/16/close-icon.png" class="closeImage" title="remove" ng-click="buttonClicked(quote)">"{{quote.text}}"</h2>
+                <h3>-{{quote.author}}</h3>
+            </div>
         </div>
-    </div>
+    </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 <script src="js/app.js"></script>

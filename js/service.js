@@ -25,6 +25,7 @@ var app = angular.module('quoteBook').service('MainService', function() {
             quotes.push({text: quote.toString(), author: auth.toString()});
             localStorage.setItem('quotes', JSON.stringify(quotes)); // adds the updated array to local memory
         }
+
     };
 
     // remove quote function (ng click)
@@ -33,7 +34,7 @@ var app = angular.module('quoteBook').service('MainService', function() {
             if (quotes[i].text.toLowerCase() === string.toLowerCase()) {
                 quotes.splice(i, 1);
             }
+            localStorage.setItem('quotes', JSON.stringify(quotes)); // adds the updated array to local memory
         }
-        localStorage.setItem('quotes', JSON.stringify(quotes)); // adds the updated array to local memory
     };
 });
