@@ -17,7 +17,4 @@ var app = angular.module('quoteBook').controller('mainCtrl', function($scope, Ma
     $scope.buttonClicked = function(obj) {
         MainService.removeData(obj.text);
     };
-
-
-
 });

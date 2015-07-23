@@ -6,30 +6,30 @@
 
 <body ng-controller="mainCtrl">
 
-<h1 class="title">Quotes Project (Angular Services)</h1>
+    <h1 class="title">Quotes Project (Angular Services)</h1>
 
-<section class="mainBody">
+        <section class="mainBody">
+            <div class="enterQuote">
+                <input class="quoteEntry" placeholder="Enter Quote" ng-model="inputQuote">
+            </div>
+            <div class="enterQuote">
+                <input class="authEntry" placeholder="Enter Author" ng-model="inputAuth">
+            </div>
+
         <div class="enterQuote">
-            <input class="quoteEntry" placeholder="Enter Quote" ng-model="inputQuote">
-        </div>
-        <div class="enterQuote">
-            <input class="authEntry" placeholder="Enter Author" ng-model="inputAuth">
+            <input class="quoteEntry" placeholder="Search" ng=hide="showMe" ng-show="showMe" ng-model="searchTerm">
+            <button class="button hide" ng-click="showMe = false" ng-hide="!showMe">Hide</button>
         </div>
 
-    <div class="enterQuote">
-        <input class="quoteEntry" placeholder="Search" ng=hide="showMe" ng-show="showMe" ng-model="searchTerm">
-        <button class="button hide" ng-click="showMe = false" ng-hide="!showMe">Hide</button>
-    </div>
+        <div class="buttons">
+            <button class="button add" ng-click="addQuote(inputQuote, inputAuth)">Add Quote</button>
+            <button class="button filter" ng-click="showMe = true">Filter Quote</button>
+        </div>
 
-    <div class="buttons">
-        <button class="button add" ng-click="addQuote(inputQuote, inputAuth)">Add Quote</button>
-        <button class="button filter" ng-click="showMe = true">Filter Quote</button>
-    </div>
-
-    <hr/>
+        <hr/>
     </section>
 
-    <div class="quoteLog" ng-repeat="quote in quotes | filter:searchTerm">
+    <div class="quoteLog" ng-repeat="quote in quotes  | filter:searchTerm track by $index">
         <div class="quoteContent">
             <h2><img src="http://icons.iconarchive.com/icons/custom-icon-design/office/16/close-icon.png" class="closeImage" title="remove" ng-click="buttonClicked(quote)">"{{quote.text}}"</h2>
             <h3>-{{quote.author}}</h3>
