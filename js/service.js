@@ -16,18 +16,18 @@ var app = angular.module('quoteBook').service('MainService', function() {
                 { text: 'What even is a jQuery?', author: 'Tyler S. McGinnis'}
             ];
         }
-        console.log(quotes);
         return quotes;
     };
 
+    // add quote function
     this.addData = function(quote, auth) {
         if (quote && auth) {  // verifies that both text fields had information
             quotes.push({text: quote.toString(), author: auth.toString()});
             localStorage.setItem('quotes', JSON.stringify(quotes)); // adds the updated array to local memory
-            console.log(quotes);
         }
     };
 
+    // remove quote function (ng click)
     this.removeData = function(string) {
         for (var i = quotes.length - 1; i >= 0; i--) {
             if (quotes[i].text.toLowerCase() === string.toLowerCase()) {
